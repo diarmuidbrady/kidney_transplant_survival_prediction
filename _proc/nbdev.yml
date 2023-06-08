@@ -1,0 +1,9 @@
+project:
+  output-dir: _docs
+
+website:
+  title: "kidney-transplant-prediction"
+  site-url: "https://bradyd35.github.io/kidney-transplant-prediction"
+  description: "Kidney Transplant Outcome Prediction"
+  repo-branch: main
+  repo-url: "https://github.com/bradyd35/kidney-transplant-prediction"
