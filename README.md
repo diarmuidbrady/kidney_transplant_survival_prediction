@@ -12,8 +12,8 @@ transplants containing donor and recipient characteristics and transplant factor
 ## Key Insights
 - We compared 3 methods of prediction and **found no significant differences** between the three methods as described below:
   1. A traditional statistical method using Linear Regression
-  2. A Machine Learning method using XGBoost
-  3. A Cluster-Then-Predict Method using mixture models and XGBoost
+  2. A machine learning method using XGBoost
+  3. A *"Cluster-Then-Predict"* method using mixture models and XGBoost
 - Therefore, the distinct value of applying machine learning approaches to this problem requires further justification. 
 - We identified kidney donor age as the principal variable in predicting kidney transplant survival outcomes. A younger donor is associated with more positive clinical outcomes.
 - The Cluster-Then-Predict Method involves first clustering the kidney transplant data and then applying a separate machine learning algorithm to each individual cluster. This framework assumes that within a transplant cohort, there are distinct phenotypes that possess differing feature importance when predicting a target variable (Survival after 1 year).
