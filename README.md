@@ -11,15 +11,15 @@ transplants containing donor and recipient characteristics and transplant factor
 
 ## Key Insights
 - We compared 3 methods of prediction and **found no significant differences** between the three methods as described below:
-  1. A traditional statistical method using Linear Regression
+  1. A traditional statistical method using linear regression
   2. A machine learning method using XGBoost
   3. A *"Cluster-Then-Predict"* method using mixture models and XGBoost
 - Therefore, the distinct value of applying machine learning approaches to this problem requires further justification. 
 - We identified kidney donor age as the principal variable in predicting kidney transplant survival outcomes. A younger donor is associated with more positive clinical outcomes.
-- The Cluster-Then-Predict Method involves first clustering the kidney transplant data and then applying a separate machine learning algorithm to each individual cluster. This framework assumes that within a transplant cohort, there are distinct phenotypes that possess differing feature importance when predicting a target variable (Survival after 1 year).
+- The *"Cluster-Then-Predict"* method involves first clustering the kidney transplant data and then applying a separate machine learning algorithm to each individual cluster. This framework assumes that within a transplant cohort, there are distinct phenotypes that possess differing feature importance when predicting a target variable (Survival after 1 year).
 - During the development of our clinical prediction models we performed a thorough literature review as well as consulting with kidney transplant domain experts from Beaumont Hospital and Royal College of Surgeons Ireland. We worked with these clinicians throughout the project, they aided us in interpreting the generated clusters and we sought their opinions during the feature engineering and feature selection phases.
 - The project was developed using Python, for cleaning, processing, and prediction, and R, for missing data imputation and implementing mixture models.
-- All work was performed in a high-performance cluster environment.
+- All work was performed in a high-performance cluster environment using Slurm, a workload manager.
 
 ## Overview
 
@@ -58,4 +58,4 @@ Then all the code in files can be found in the cells with `#| export` at the top
 _nbs_ contains all notebooks used for analysis. These notebooks are then converted to Python files available in _kidney\_transplant\_prediction_ as importable files.
 
 ### reports
-_reports_ contain a variety of supporting documents. Firstly, _deliverables_ contain documents that are specific to the grading of our project such as the [research proposal](reports/deliverables/research_proposal.pdf) and [final report](reports/deliverables/CA4021_Final_Report.pdf). _figures_ includes all visualisations generated during analysis. This will not be an exhaustive list, instead only the key visuals need for supporting documents.
+_reports_ contain a variety of supporting documents. Firstly, _deliverables_ contain documents that are specific to the grading of our project such as the [research proposal](reports/deliverables/research_proposal.pdf) and [final report](reports/deliverables/CA4021_Final_Report.pdf). _figures_ includes all visualisations generated during analysis. This will not be an exhaustive list, instead only the key visuals needed for supporting documents.
