@@ -15,7 +15,11 @@ transplants containing donor and recipient characteristics and transplant factor
   2. A machine learning method using XGBoost
   3. A *"Cluster-Then-Predict"* method using mixture models and XGBoost
 - Therefore, the distinct value of applying machine learning approaches to this problem requires further justification. 
-- We identified kidney donor age as the principal variable in predicting kidney transplant survival outcomes. A younger donor is associated with more positive clinical outcomes.
+- We identified kidney donor age as the principal variable in predicting kidney transplant survival outcomes. A younger donor is associated with more positive clinical outcomes. Therefore, an older donor is associated with a lower estimated Glomerular Filtration Rate (a measure of kidney function). The visual below illustrates this inverse relationship.
+
+#### The relationship between Donor Age and estimated Glomerular Filtration Rate levels at 1-year post kidney transplant (eGFR at 1 year)
+There is a drop in 0.583 eGFR units for every 1-year increase in Donor Age. eGFR at 1-year post transplant, measured on a 0 to 120 scale, drops from 65 (mildly dysfunctional) for a 20-year-old donor to 30 (severely dysfunctional) for an 80-year-old donor.
+![The relationship between Donor Age and estimated Glomerular Filtration Rate levels at 1 year post kidney transplant (eGFR at 1 year)](reports/figures/eda/eGFR1Year_DonAge.png).
 - The *"Cluster-Then-Predict"* method involves first clustering the kidney transplant data and then applying a separate machine learning algorithm to each individual cluster. This framework assumes that within a transplant cohort, there are distinct phenotypes that possess differing feature importance when predicting a target variable (Survival after 1 year).
 - During the development of our clinical prediction models we performed a thorough literature review as well as consulting with kidney transplant domain experts from Beaumont Hospital and Royal College of Surgeons Ireland. We worked with these clinicians throughout the project, they aided us in interpreting the generated clusters and we sought their opinions during the feature engineering and feature selection phases.
 - The project was developed using Python, for cleaning, processing, and prediction, and R, for missing data imputation and implementing mixture models.
